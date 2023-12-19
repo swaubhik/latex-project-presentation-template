@@ -1,0 +1,120 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+\usefonttheme{professionalfonts}
+% \usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{emoji}
+% \usepackage{natbib}
+\usepackage{amsmath,amssymb,amsfonts}
+% Set colors
+\definecolor{primary}{RGB}{50, 50, 210}
+\definecolor{secondary}{RGB}{60, 64, 72}
+\definecolor{tertiary}{RGB}{178, 178, 178}
+\definecolor{quaternary}{RGB}{234, 234, 234}
+
+\setbeamercolor{primary}{fg=white, bg=primary}
+\setbeamercolor{secondary}{fg=white, bg=secondary}
+\setbeamercolor{tertiary}{fg=black, bg=tertiary}
+\setbeamercolor{quaternary}{fg=black, bg=quaternary}
+\setbeamercolor{titlelike}{parent=structure,fg=primary}
+\setbeamercolor{item}{fg=primary}
+\setbeamercolor{section in toc}{fg=secondary}
+\setbeamercolor{block title}{bg=primary, fg=white}
+\setbeamercolor{block body}{bg=primary!10}
+\setbeamercolor{block title example}{bg=tertiary, fg=black}
+\setbeamercolor{block body example}{bg=quaternary}
+\setbeamercolor{block title alerted}{bg=orange!50}
+\setbeamercolor{block body alerted}{bg=orange!10}
+\setbeamertemplate{blocks}[rounded][shadow]
+% headline
+\setbeamertemplate{headline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{primary}%
+    \usebeamerfont{section in head/foot}\insertsection
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{secondary}%
+  \insertsubsection
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+% footline
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{primary}%
+    \usebeamerfont{author in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{secondary}%
+    \usebeamerfont{title in head/foot} M.Tech :: CSE :: CITK
+  \end{beamercolorbox}%
+  
+  \begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{tertiary}%
+    \usebeamerfont{title in head/foot}\insertdate
+  \end{beamercolorbox}%
+  
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,center]{quaternary}%
+    \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\AtBeginSection[]{ 
+    \begin{frame}{Outline} 
+        \tableofcontents[currentsection] 
+    \end{frame} }
+
+\title[Short Project title]{\textbf{Project Title}\vspace{-.5cm}}
+% \subtitle{\textcolor{}{}[PCSE191] Seminar \vspace{-.5cm}}
+\author[Swaubhik, 1008]{\textbf{Your Name} (Roll no.)\\ \vspace{2mm} \\ \small{Under the guidance of}\\ \textbf{Professor X} \\ (Supervisor position)}\vspace{-.5cm}
+\institute[CSE, CITK]{Department of Computer Science \& Engineering \\ Central Institute of Technology Kokrajhar \\ Deemed to be University under MoE, Govt. of India\vspace{-.5cm}}
+\date{\small{\today}}
+\titlegraphic{\includegraphics[width=1cm]{images/logo/citklogo.png}}
+\begin{document}
+
+\begin{frame}
+  \titlepage
+  
+\end{frame}
+
+\section{Introduction}
+\input{segments/1_intro}
+
+% \section{Background}
+% \input{segments/2_background}
+
+% \section{Related Works}
+% \input{segments/3_related_works}
+
+% \section{Experiment Details}
+% \input{segments/4_experiments}
+
+% \section{Opportunities}
+% \input{segments/5_application}
+
+% \section{Conclusion}
+% \input{segments/6_conclude}
+
+
+\section*{References}
+
+\begin{frame}[t,allowframebreaks]
+    \frametitle{References}
+     \nocite{*}
+    \bibliographystyle{apalike}
+    % \bibliographystyle{apalike}
+    \bibliography{ref.bib}
+\end{frame}
+\section*{}
+\begin{frame}
+    \centering
+    \huge{Thank you}
+\end{frame}
+\end{document}
